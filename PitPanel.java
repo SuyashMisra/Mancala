@@ -24,7 +24,7 @@ public class PitPanel extends JPanel implements ChangeListener, MouseListener
       this.pitNumber = pitNumber;
       
       //Only add mouse listener for player A 
-      if(pitSide=='a')
+      if(pitSide == 'a')
         this.addMouseListener(this);
       
       stoneAmount = mancalaModel.getPitValue(pitSide, pitNumber);
@@ -70,7 +70,8 @@ public class PitPanel extends JPanel implements ChangeListener, MouseListener
    public void mousePressed(MouseEvent e)
    {
        if(mancalaModel.currentPlayer=='a')
-        mancalaModel.doTurn(pitSide, pitNumber);
+           if(mancalaModel.getPitValue(pitSide, pitNumber) != 0)
+            mancalaModel.doTurn(pitSide, pitNumber);
    }
 
    public void mouseReleased(MouseEvent e)

@@ -44,7 +44,7 @@ public class MancalaModel
       else if (player == 'b')
          return mancalaB.getAmount();
       
-      System.out.println("Error: getMancalaValue()");
+//      System.out.println("Error: getMancalaValue()");
       return -1;
    }
    public void attach(ChangeListener c)
